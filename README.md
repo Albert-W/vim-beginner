@@ -1,11 +1,11 @@
-# vim-beginner  
+# A guide for Vim beginner  
 
-It can be challenging to transition from a full-fledged IDE to Vim. Vim has a steep learning curve, especially for beginners. As someone who has struggled to learn Vim multiple times, I understand the difficulties involved. That's why I have created this guide to help you navigate the initial hurdles.
+It can be challenging to transition from a full-fledged IDE (such as VScode, Intellij IDEA) to Vim. Vim has a steep learning curve, especially for beginners. As someone who has struggled to learn Vim multiple times, I understand the difficulties involved. That's why I have created this guide to help you overcome the initial hurdles.
 
-The key differences between this guide and other guide are that:
+The key differences between this guide and other guides are that:
 
-- The commands are categorized into 4 modes: `Normal Mode`, `Insert Mode`, `Command-line Mode` and `Visual Mode`.  
-- It introduce the idea with `Verbs` and `Nouns`. `Verbs` represent that actions users take, `Nouns` are the text objects which `Verbs` act upon. Inside `Verbs` there are `Transitive Verbs` and `Intransitive Verbs`.
+- The commands are categorized into 4 modes: `Normal Mode`, `Insert Mode`, `Command-Line Mode` and `Visual Mode`.  
+- It introduces the idea with `Verbs` and `Nouns`. `Verbs` represent that actions users take, `Nouns` are the text objects which `Verbs` act upon.  `Verbs` consist of `Transitive Verbs` and `Intransitive Verbs`.
 - `Transitive Verbs` are the `Verbs` need to work with `text objects`.
 - `Intransitive Verbs` are the `Verbs` work alone without `text objects`.
 
@@ -13,24 +13,24 @@ The key differences between this guide and other guide are that:
 
 ### Normal Mode
 
-- The first and default mode when you first enter Vim.  
-- The most used mode. The reason why this is the default mode please we spend most of our time reviewing and updating text rather than writing new contents.  
-- You can't insert text directly in this mode.  
+It's the first and default mode when you first enter Vim.  
+The reason why this is the default mode is because we spend most of our time reviewing and updating text rather than writing new contents.  
+You can't insert text directly in this mode.  This is the key difference between Vim and other text editors.
 
 #### Text object
 
-A command will move cursor to a specific place in the file, Text object is the content that cursor just go through.  
-A text object are blocks of text which can be select and manipulate as an entity.  for example:  
-`h` will move cursor to the left, thus it also represents a text object: the char on the left, `dh` will delete the char on the left.  
+A command is able to move the cursor to a specific place in the document. Text object is the content that cursor just go through.  
+A text object are blocks of text which can be select and manipulate as an entity.  
+For example:  
+`h` will move cursor to the left, thus it also represents a text object - the char on the left, `dh` will delete the char on the left.  
 `l` will more the cursor to the right, `dl` will delete the char on the right. `d2l` will delete 2 chars on the right.  
-`w` means `word`, type `w` will move the cursor outside the current word. `dw` will delete the word. `d2w` will delete two words.  
+`w` means `word`, type `w` will move the cursor after the current word. `dw` will delete the word. `d2w` will delete two words.  
 `0` means start of the line, type `0` will move the cursor to the start of the line. `d0` will delete the whole content that the cursor just go through.  
-`$` means end of the line, guess what `d$` will do, and give it a try.  
+`$` means end of the line, guess what `d$` will do, and give it a try.
 
+This is not an exclusive list of text objects, more of them will be illustrated in the [image](#commands-in-normal-mode).  
 
-#### Verb
-
-##### Transitive Verb
+#### Transitive Verb
 
 Transitive Verb need to work with a text object. There are 3 transitive verbs.  
 
@@ -41,28 +41,30 @@ Transitive Verb need to work with a text object. There are 3 transitive verbs.
   - `dw` - delete a word  
   - `dd` - delete a line
   - `d2d` - delete 2 lines
-- `y` - yank(copy), it means pull the text in to register   
+- `y` - yank(copy), it means pull the text in to register
   - `yw` - copy a word
   - `yy` - copy a line
   - `y2y` - copy 2 lines  
 
-##### Intransitive Verb
+#### Intransitive Verb
 
-Intransitive Verb are the verb can work without a text object. There are many of them. Some of the most used verbs are
+Intransitive Verbs are the verb can work without a text object. There are many of them. Some of the most used verbs are
 
 - `p` - paste
 - `x` - kill a char
 - `s` - kill a char and insert
 - `u` - undo
-- `ctrl - r` - redo 
+- `ctrl - r` - redo
 
-A graph of commands in Normal mode are illustrate below. 
+#### Commands in Normal Mode
+
+A tree diagram of commands in `Normal Mode` are illustrate below.
 
 ![Commands in Normal mode](Normal.jpg)
 
 ### Insert Mode
 
-The mode to insert text, like most other edits.  
+The mode to insert text, like most other editors.  
 To enter Insert Mode, just type in
 
 - `i` - insert
@@ -71,7 +73,7 @@ To enter Insert Mode, just type in
 - `s` - kill a char and insert
 - `cw` - kill a word and insert
 
-Here are some most commonly used shortcuts:
+Here are some most commonly used shortcuts in `Insert Mode`:
 
 - `Ctrl-h` - Delete the character before the cursor (backspace).
 - `Ctrl-w` - Delete the word before the cursor.
@@ -82,17 +84,17 @@ Here are some most commonly used shortcuts:
 - `Ctrl-r {register}` - Insert the contents of a register. (e.g., `Ctrl-r 0` will paste the just copied contents)
 - `Esc` - Exit Insert Mode and return to Normal Mode.
 
-
 ### Visual Mode
+
 The mode to select texts as a text object and manipulate them with the `Transitive Verb`.  
 
 To enter `Visual Mode`, just type in
 
-- `v`: visual 
+- `v`: visual
 - `V`: choose lines
 - `Ctrl-v`: choose block.
 
-Inside this mode, you can use following commands: 
+In this mode, you can use following commands:
 
 - `d`: delete
 - `y`: yank
@@ -125,7 +127,9 @@ Here are some used commands:
 - `:10` - Go to line 10
 - `:vs` - Vertical split window.  
 - `:sp` - Split window (Horizontal)  
-
 - `:reg` - list and print all the contents in registers  
 
+## Conclusion  
 
+A mind map of 4 modes in Vim will conclude the guide for Vim beginners.
+![4 modes in Vim](Vim.jpg)
