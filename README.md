@@ -1,4 +1,4 @@
-# A guide for Vim beginner  
+# A guide for Vim beginners  
 
 It can be challenging to transition from a full-fledged IDE (such as VScode, Intellij IDEA) to Vim. Vim has a steep learning curve, especially for beginners. As someone who has struggled to learn Vim multiple times, I understand the difficulties involved. That's why I have created this guide to help you overcome the initial hurdles.
 
