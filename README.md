@@ -13,7 +13,7 @@ The key differences between this guide and other guides are that:
 
 ### Normal Mode
 
-It's the first and default mode when you first enter Vim.  
+It's the default mode when you first enter Vim.  
 The reason why this is the default mode is because we spend most of our time reviewing and updating text rather than writing new contents.  
 You can't insert text directly in this mode.  This is the key difference between Vim and other text editors.
 
@@ -58,7 +58,7 @@ Intransitive Verbs are the verb can work without a text object. There are many o
 
 #### Commands in Normal Mode
 
-A tree diagram of commands in `Normal Mode` are illustrate below.
+A tree diagram of commands in `Normal Mode` are illustrated below.
 
 ![Commands in Normal mode](Normal.jpg)
 
