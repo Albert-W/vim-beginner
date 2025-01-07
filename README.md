@@ -133,3 +133,5 @@ Here are some used commands:
 
 A mind map of 4 modes in Vim will conclude the guide for Vim beginners.
 ![4 modes in Vim](Vim.jpg)
+
+Repo: [vim-beginner](https://github.com/Albert-W/vim-beginner)
